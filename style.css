@@ -147,7 +147,38 @@ html{
     --text-color-light: hsl(0, 8%, 65%);
     --input-light: hsl(0, 70%, 96%);
     --body-color: rgb(230, 204, 255);
-    /*--body-color: rgb(43, 29, 66);*/
+
+    --nav-menu-var: 0 7.5px 15px #fff;
+    --floating-tiles-background: #e6ccff;
+    --about-box-shadoww:  10px 10px 45px #ad99bf,
+             -10px -10px 45px #ffffff;
+    --school-box-shadoww: 20px 20px 45px #ad99bf,
+            -20px -20px 45px #ffffff;
+    --projects-box-shadoww: 15px 15px 35px #ad99bf,
+            -15px -15px 35px #ffffff;
+    --footer-box-shadoww: 20px 20px 45px #ad99bf,
+            -20px -20px 45px #ffffff;
+    --desktops-three-tile-box-shadoww: 10px 10px 35px #ad99bf,
+            -10px -10px 35px #ffffff;
+
+    /*drk mode colours
+    --body-color: rgb(44, 44, 44);
+    --title-color: hsl(0, 0%, 86%);
+    --text-color: hsl(0, 0%, 86%);
+    --text-color-light: hsl(0, 9%, 68%);
+    --nav-menu-var: 0 7.5px 15px rgb(71, 71, 71);
+    --floating-tiles-background: #2c2c2c;
+    --about-box-shadoww:  10px 10px 45px #0c0c0c,
+             -10px -10px 45px #414141;
+    --school-box-shadoww: 20px 20px 45px #0c0c0c,
+             -20px -20px 45px #414141;
+    --projects-box-shadoww: 15px 15px 35px #0c0c0c,
+             -15px -15px 35px #414141;
+    --footer-box-shadoww: 20px 20px 45px #0c0c0c,
+             -20px -20px 45px #414141;
+    --desktops-three-tile-box-shadoww: 10px 10px 35px #0c0c0c,
+             -10px -10px 35px #414141;*/
+    
     --container-color: #fff;
 
     /***************body font********************/
@@ -272,6 +303,25 @@ ion-icon{
     background-color: var(--body-color);
 }
 
+.user__prompt{
+    width: fit-content;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 0.5rem;
+    margin-bottom: 3rem;
+    border-radius: 1rem;
+    z-index: var(--z-fixed);
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user__prompt ion-icon{
+    margin-left: 1rem;
+}
 /*********************NAV*******************************/
 
 .headerNav{
@@ -306,7 +356,7 @@ ion-icon{
         max-width: 100vw;
         background-color: var(--body-color);
         padding: 2rem 1.5rem 4rem;
-        box-shadow: 0 1px 4px #fff;
+        box-shadow: var(--nav-menu-var);
         border-radius: 1.5rem 1.5rem 0 0;
         transition: all 0.3s ease-in-out;
         z-index: var(--z-fixed);
@@ -368,22 +418,23 @@ ion-icon{
     overflow:hidden;
     width: 94vw;
     height: 25.25rem;
-    padding-left: 4vw;
-    margin-left: -5vw;
+    padding-left: 6vw;
+    margin-left: -7vw;
+    padding-right: -2vw;
 }
 
 .blob-class svg{
     margin-top: 2rem;
-    margin-left: -5rem;
+    margin-left: -4.5rem;
     width: 32.25rem;
     height: 20.25rem;
 }
 
 .glow__blob{
-    filter: blur(35px);
+    filter: blur(33px);
     position:absolute;
-    top: 1rem;
-    left: 1rem;
+    top: 0.5rem;
+    left: 1.5rem;
     z-index: -1;
 }
 
@@ -397,7 +448,7 @@ ion-icon{
     background-size: cover;
     background-position: center;
     top: 6rem;
-    left: 6rem;
+    left: 6.5rem;
     border: 1px solid var(--body-color);
 }
 
@@ -433,11 +484,16 @@ ion-icon{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--first-color);
+    border-radius: 50%;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .home__scroll-button ion-icon{
     font-size: 1.8rem;
-    color: var(--first-color);
+    color: white;
 }
 
 .about{
@@ -446,9 +502,8 @@ ion-icon{
     margin-left: auto;
     margin-right: auto;
     border-radius: 3rem;
-    background: #e6ccff;
-    box-shadow:  10px 10px 45px #ad99bf,
-             -10px -10px 45px #ffffff;
+    background: var(--floating-tiles-background);
+    box-shadow:  var(--about-box-shadoww);
 }
 
 .about__container{
@@ -532,9 +587,8 @@ ion-icon{
     margin-right: auto;
     height: 15rem;
     border-radius: 3rem;
-    background: #e6ccff;
-    box-shadow:  20px 20px 45px #ad99bf,
-             -20px -20px 45px #ffffff;
+    background: var(--floating-tiles-background);
+    box-shadow:  var(--school-box-shadoww);
     margin-bottom: var(--mb-3);
     display: flex;
     justify-content: center;
@@ -577,9 +631,8 @@ ion-icon{
     margin-right: 3vw;
     height: 15rem;
     border-radius: 3rem;
-    background: #e6ccff;
-    box-shadow:  15px 15px 35px #ad99bf,
-             -15px -15px 35px #ffffff;
+    background: var(--floating-tiles-background);
+    box-shadow:  var(--projects-box-shadoww);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -638,9 +691,8 @@ ion-icon{
     margin-right: auto;
     height: 15rem;
     border-radius: 3rem;
-    background: #e6ccff;
-    box-shadow:  20px 20px 45px #ad99bf,
-             -20px -20px 45px #ffffff;
+    background: var(--floating-tiles-background);
+    box-shadow:  var(--footer-box-shadoww);
     margin-bottom: var(--mb-3);
     display: flex;
     align-items: center;
@@ -661,6 +713,10 @@ ion-icon{
     justify-content: center;
     align-items: center;
     max-width: fit-content;
+}
+
+.btn ion-icon{
+    margin-right: 0.5rem;
 }
 
 
@@ -771,6 +827,11 @@ ion-icon{
 }
 
 @media screen and (min-width: 912px){
+
+    .user__prompt{
+        display:none;
+    }
+
     .home__content{
         display: flex;
         flex-direction: column;
@@ -795,7 +856,7 @@ ion-icon{
 
     .nav-for-img{
         top: 10.5rem;
-        left: 45vw;
+        left: 44vw;
     }
 
     .glow__blob{
@@ -855,9 +916,8 @@ ion-icon{
         margin-left: auto;
         margin-right: auto;
         border-radius: 3rem;
-        background: #e6ccff;
-        box-shadow:  10px 10px 35px #ad99bf,
-                 -10px -10px 35px #ffffff;
+        background: var(--floating-tiles-background);
+        box-shadow:  var(--desktops-three-tile-box-shadoww);
         transition: all 0.7s ease-in-out;
     }
 
@@ -895,8 +955,7 @@ ion-icon{
     .school__container{
         margin-left: 4rem;
         width: 27vw;
-        box-shadow:  10px 10px 35px #ad99bf,
-             -10px -10px 35px #ffffff;
+        box-shadow:  var(--desktops-three-tile-box-shadoww);
         transition: all 0.7s ease-in-out;
     }
 
@@ -916,8 +975,7 @@ ion-icon{
         height: 12rem;
         margin-left: auto;
         margin-right: auto;
-        box-shadow:  10px 10px 35px #ad99bf,
-             -10px -10px 35px #ffffff;
+        box-shadow:  var(--desktops-three-tile-box-shadoww);
         transition: all 0.7s ease-in-out;
     }
 
@@ -937,8 +995,7 @@ ion-icon{
         width: 40vw;
         height: 15rem;
         border-radius: 3rem;
-        box-shadow:  10px 10px 35px #ad99bf,
-             -10px -10px 35px #ffffff;
+        box-shadow:  var(--desktops-three-tile-box-shadoww);
         transition: all 0.7s ease-in-out;
     }
 

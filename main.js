@@ -1,3 +1,19 @@
+let messageclosed = false;
+
+let closeMessage = function(){
+    if(messageclosed == true)return;
+    document.querySelector(".user__prompt").style.visibility = "hidden";
+    messageclosed = true;
+}
+
+window.onload = function(){
+    setTimeout(closeMessage, 3000);
+}
+
+window.onscroll = function(){
+    closeMessage();
+}
+
 /* 
 SHOW MENU
 */
@@ -8,6 +24,7 @@ const closeMenu = document.querySelector('#nav-close');
 if(openMenu){
     openMenu.addEventListener('click', function(){
         menu.classList.add('show-menu');
+        closeMessage();
     });
 }
 if(closeMenu){
@@ -119,7 +136,6 @@ function scrollbackwards(){
 
 function determineWindowAndScroll(){
     let width = window.screen.width;
-    console.log(width);
 
     if(width < 912){
         const element = document.getElementById('contact');
@@ -128,5 +144,39 @@ function determineWindowAndScroll(){
     else{
         const element = document.getElementById('contact-laptop');
         element.scrollIntoView({behavior: 'smooth' });
+    }
+}
+
+let currentMode = 1;
+function switchModes(){
+    if(currentMode == 1){
+        document.querySelector(".darkmodediv").innerHTML = '<ion-icon name="sunny-outline"></ion-icon> Light Mode';
+        document.documentElement.style.setProperty('--body-color', 'rgb(44, 44, 44)');
+        document.documentElement.style.setProperty('--title-color', 'hsl(0, 0%, 86%)');
+        document.documentElement.style.setProperty('--text-color', 'hsl(0, 0%, 86%)');
+        document.documentElement.style.setProperty('--text-color-light', 'hsl(0, 9%, 68%)');
+        document.documentElement.style.setProperty('--nav-menu-var', '0 7.5px 15px rgb(71, 71, 71)');
+        document.documentElement.style.setProperty('--floating-tiles-background', '#2c2c2c');
+        document.documentElement.style.setProperty('--about-box-shadoww', '10px 10px 45px #0c0c0c,-10px -10px 45px #414141');
+        document.documentElement.style.setProperty('--school-box-shadoww', '20px 20px 45px #0c0c0c,-20px -20px 45px #414141');
+        document.documentElement.style.setProperty('--projects-box-shadoww', '15px 15px 35px #0c0c0c,-15px -15px 35px #414141');
+        document.documentElement.style.setProperty('--footer-box-shadoww', '20px 20px 45px #0c0c0c,-20px -20px 45px #414141');
+        document.documentElement.style.setProperty('--desktops-three-tile-box-shadoww', '10px 10px 35px #0c0c0c,-10px -10px 35px #414141');
+        currentMode = 0;
+    }
+    else if(currentMode == 0){
+        document.querySelector(".darkmodediv").innerHTML = '<ion-icon name="moon-outline"></ion-icon> Dark Mode';
+        document.documentElement.style.setProperty('--body-color', 'rgb(230, 204, 255)');
+        document.documentElement.style.setProperty('--title-color', 'hsl(0, 8%, 15%)');
+        document.documentElement.style.setProperty('--text-color', 'hsl(0, 8%, 45%)');
+        document.documentElement.style.setProperty('--text-color-light', 'hsl(0, 8%, 65%)');
+        document.documentElement.style.setProperty('--nav-menu-var', '0 7.5px 15px #fff');
+        document.documentElement.style.setProperty('--floating-tiles-background', '#e6ccff');
+        document.documentElement.style.setProperty('--about-box-shadoww', '10px 10px 45px #ad99bf,-10px -10px 45px #ffffff');
+        document.documentElement.style.setProperty('--school-box-shadoww', '20px 20px 45px #ad99bf,-20px -20px 45px #ffffff');
+        document.documentElement.style.setProperty('--projects-box-shadoww', '15px 15px 35px #ad99bf,-15px -15px 35px #ffffff');
+        document.documentElement.style.setProperty('--footer-box-shadoww', '20px 20px 45px #ad99bf,-20px -20px 45px #ffffff');
+        document.documentElement.style.setProperty('--desktops-three-tile-box-shadoww', '10px 10px 35px #ad99bf,-10px -10px 35px #ffffff');
+        currentMode = 1;
     }
 }

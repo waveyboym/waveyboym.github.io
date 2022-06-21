@@ -48,6 +48,12 @@
                             <ion-icon name="chatbox-outline"></ion-icon> Contact Me
                         </a>
                     </li>
+
+                    <li class="nav__item">
+                        <a class="nav__link darkmodediv" onclick="switchModes()">
+                            <ion-icon name="moon-outline"></ion-icon> Dark Mode
+                        </a>
+                    </li>
                 </ul>
                 <ion-icon name="close-outline" class="nav__close" id="nav-close"></ion-icon>
             </div>
@@ -59,6 +65,10 @@
         </nav>
     </header>
 
+    <div class="user__prompt">
+        click here to turn on dark mode<ion-icon name="arrow-down-outline"></ion-icon>
+    </div>
+
     <!--******************content on page********************-->
     <main class="main">
         <!--********************landing page***************-->
@@ -66,13 +76,13 @@
             <div class="home__container container grid">
                 <div class="home__content grid">
                     <div class="home__social">
-                        <a href="#" class="home_social-icon" onclick="determineWindowAndScroll()">
+                        <a class="home_social-icon" href="mailto:u21546551@tuks.co.za" target="_blank">
                             <ion-icon name="mail-outline"></ion-icon>
                         </a>
                         <a href="https://github.com/waveyboym" target="_blank" class="home_social-icon">
                             <ion-icon name="logo-github"></ion-icon>
                         </a>
-                        <a href="#" class="home_social-icon" onclick="determineWindowAndScroll()">
+                        <a class="home_social-icon" onclick="determineWindowAndScroll()">
                             <ion-icon name="logo-discord"></ion-icon>
                         </a>
                     </div>
@@ -179,12 +189,11 @@
                         </a>
                     </div>
 
-                    <a href="#before-about" class="home__scroll-button button--flex">
+                    <a href="#about" class="home__scroll-button button--flex">
                         <ion-icon name="chevron-down-outline"></ion-icon>
                     </a>
                 </div>
             </div>
-            <section id="before-about"></section>
         </section>
         <!--********************about***************-->
         <div class="container-for-desktops">
@@ -225,7 +234,7 @@
                             <p class="txt">Learning python for machine learning purposes</p>
                         </div>
                       </div>
-                      <a href="img/Michael_CV.pdf" class="btn" download="Michael_CV">
+                      <a href="img/Michael_CV.pdf" class="btn" target="_blank" download="Michael_CV">
                           <ion-icon name="download-outline"></ion-icon> Download Resume
                     </a>
                 </div>
