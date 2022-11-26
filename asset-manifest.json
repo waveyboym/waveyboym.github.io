@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.1451d64b.css",
-    "main.js": "/static/js/main.ba84be58.js",
+    "main.css": "/static/css/main.6a576eed.css",
+    "main.js": "/static/js/main.e3174c81.js",
     "static/media/Laptop.svg": "/static/media/Laptop.688d6d9db6ed2218189fd60b04d72891.svg",
-    "static/media/Michael_CV.pdf": "/static/media/Michael_CV.5dd13cc251db5ec175c3.pdf",
+    "static/media/Michael_CV.pdf": "/static/media/Michael_CV.3a71c063af9b5c8c6337.pdf",
     "static/media/Telephone.svg": "/static/media/Telephone.877c37464dfbfa18540ad948e95fafd0.svg",
     "static/media/Waving_hand.svg": "/static/media/Waving_hand.b92fc631324f3dfa8708af6e8ec73c57.svg",
     "static/media/C.svg": "/static/media/C.6d0b0404ffd5f6adfb6fc66fde4091b0.svg",
@@ -80,11 +80,11 @@
     "static/media/SquircleW.svg": "/static/media/SquircleW.f4c3f4715a01176cc348b2f45eface66.svg",
     "static/media/NPM.svg": "/static/media/NPM.e543792e6122174c494ddf79a13a9faf.svg",
     "static/media/Codesandbox.svg": "/static/media/Codesandbox.263b0a879a65d6ce5d941e4c10f59aa6.svg",
-    "main.1451d64b.css.map": "/static/css/main.1451d64b.css.map",
-    "main.ba84be58.js.map": "/static/js/main.ba84be58.js.map"
+    "main.6a576eed.css.map": "/static/css/main.6a576eed.css.map",
+    "main.e3174c81.js.map": "/static/js/main.e3174c81.js.map"
   },
   "entrypoints": [
-    "static/css/main.1451d64b.css",
-    "static/js/main.ba84be58.js"
+    "static/css/main.6a576eed.css",
+    "static/js/main.e3174c81.js"
   ]
 }
